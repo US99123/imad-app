@@ -20,3 +20,15 @@ body {
     height: 200px;
 }
 
+<style>
+            .container {
+            max-width: 800;
+            margin: 0 auto;
+            color: rgb(39, 144, 176);
+            font-family: san-serif;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-right: 35px;
+                        }
+            
+        </style>
