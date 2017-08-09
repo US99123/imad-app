@@ -5,7 +5,10 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles={
+    
+
+articleOne: {
     title: 'Article one appear | US',
     heading: 'Article 1 appear',
     date: 'sep 5, 2016',
@@ -18,6 +21,35 @@ var articleOne = {
             <p>
                  this is content for 1 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right now
             </p>`
+},
+articleTwo: {
+    title: 'Article 2 appear | US',
+    heading: 'Article 2 appear',
+    date: 'sep 6, 2016',
+    content:`<p>
+            this is content for 2 article that i am prearing right nowthis is content for 1 article that i am prearing right nowvthis is content for 2 article that i am prearing right nowthis is content for 1 article that i am prearing right now
+            </p>
+            <p>
+                this is content for 2 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 12 article that i am prearing right nowthis is content for 1 article that i am prearing right now
+            </p>
+            <p>
+                 this is content for 2 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right now
+            </p>`
+},
+articleThree: {
+    title: 'Article 3 appear | US',
+    heading: 'Article 3 appear',
+    date: 'sep 6, 2016',
+    content:`<p>
+            this is content for 3 article that i am prearing right nowthis is content for 1 article that i am prearing right nowvthis is content for 3 article that i am prearing right nowthis is content for 1 article that i am prearing right now
+            </p>
+            <p>
+                this is content for 3 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 3 article that i am prearing right nowthis is content for 1 article that i am prearing right now
+            </p>
+            <p>
+                 this is content for 3 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 3 article that i am prearing right nowthis is content for 3 article that i am prearing right now
+            </p>`
+},
 };
 
 
@@ -63,17 +95,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res){
-   res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res){
+    var articleName = res.params.articleNames;
+   res.send(createTemplate(articles[articlesName]));
    });
 
-app.get('/article-second', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-second.html'));
-});
-
-app.get('/article-three', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
