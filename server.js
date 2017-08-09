@@ -8,8 +8,8 @@ app.use(morgan('combined'));
 var articles={
     
 
-articleOne: {
-    title: 'Article one appear | US',
+article-one: {
+    title: 'Article one appear',
     heading: 'Article 1 appear',
     date: 'sep 5, 2016',
     content:`<p>
@@ -22,7 +22,7 @@ articleOne: {
                  this is content for 1 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right now
             </p>`
 },
-articleTwo: {
+articl-two: {
     title: 'Article 2 appear | US',
     heading: 'Article 2 appear',
     date: 'sep 6, 2016',
@@ -36,7 +36,7 @@ articleTwo: {
                  this is content for 2 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right now
             </p>`
 },
-articleThree: {
+article-three: {
     title: 'Article 3 appear | US',
     heading: 'Article 3 appear',
     date: 'sep 6, 2016',
