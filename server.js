@@ -55,7 +55,7 @@ var htmlTemplate = `
     </body>
 </html>
 `;
-return htmlTepmlate;
+return htmlTemplate;
 }
 
 
