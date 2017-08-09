@@ -22,7 +22,7 @@ var articles = {
                  this is content for 1 article that i am prearing 1 nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right nowthis is content for 1 article that i am prearing right now
             </p>`
 },
-'articl-two': {
+'article-two': {
     title: 'Article 2 appear | US',
     heading: 'Article 2 appear',
     date: 'sep 6, 2016',
