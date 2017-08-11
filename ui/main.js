@@ -2,7 +2,10 @@ var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function(){
     
-    var reuqest = new XMLHttpRequest();
+    counter = counter + 1;
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
+    /*var reuqest = new XMLHttpRequest();
         
     request.onreadystatechange = function(){
     if(request.readyState === XMLHttpRequest.DONE){
@@ -11,15 +14,13 @@ button.onclick = function(){
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
         }
-    }    
+    }   
     };    
-
-    
    request.open('GET', 'http://erutsavsolanki27.imad.hasura-app.io/counter', true);
-   request.send(null);
+   request.send(null); */
 };
 
-
+/*
 var nameInput = document.getElementByID('name');
 var name = nameInput.value;
 var submit = document.getElementByID('submit_btn');
@@ -35,4 +36,4 @@ submit.onClick = function(){
  ul.innerHTML = list;
  
  
-};
+};*/
