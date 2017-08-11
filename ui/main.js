@@ -5,7 +5,7 @@ button.onclick = function(){
     counter = counter + 1;
     var span = document.getElementById('count');
     span.innerHTML = counter.toString();
-    /*var reuqest = new XMLHttpRequest();
+    var reuqest = new XMLHttpRequest();
         
     request.onreadystatechange = function(){
     if(request.readyState === XMLHttpRequest.DONE){
@@ -17,23 +17,23 @@ button.onclick = function(){
     }   
     };    
    request.open('GET', 'http://erutsavsolanki27.imad.hasura-app.io/counter', true);
-   request.send(null); */
+   request.send(null); 
 };
 
-/*
+
 var nameInput = document.getElementByID('name');
 var name = nameInput.value;
 var submit = document.getElementByID('submit_btn');
 submit.onClick = function(){
     
     
- var names = ['name1', 'name2', 'name3'];
+ var names = ['name1', 'name2', 'name3', 'name4'];
  var list = '';
  for(var i=0; i < names.length; i++){
      list += '<li>' + names[i] + '</li>';
  }
  var ul = document.getElementByID('namelist');
- ul.innerHTML =  list;
+ ul.innerHTML = list;
  
  
-};*/
+};
