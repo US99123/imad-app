@@ -97,7 +97,7 @@ var htmlTemplate = `
 `;
 return htmlTemplate;
 }
-/*
+
 var counter = 0;
 app.get('/counter', function (req, res) {
 counter = counter + 1;
@@ -107,7 +107,7 @@ res.send(counter.toString());
 app.get('/counter', function(req, res){
     counter = counter +1;
     res.send(counter.toString());
-});
+});*/
 
 
 app.get('/', function (req, res) {
@@ -157,4 +157,4 @@ app.get('/ui/madi.png', function (req, res) {
 var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
-});*/
+});
