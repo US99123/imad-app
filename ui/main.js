@@ -1,31 +1,99 @@
+/*var button = document.getElementById('counter');
+var counter = 0;
 
- <div id='main text' class="center text-big bold">
-                           G I R I Z A 
-            </div>
-    	    <div class="center text-big bold">
-    	      !!  My First Web App !!
-    	    </div>
-    	    <br>
+button.onclick = function() {
 
-    	    <hr>
-            <h3> Quick Bites</h3>
-            <div>
-                1. This is a recreational webapp
-                2. Every page of this webapp was a learning step for me
-                3. It's my first webapp ever! ;)
-            </div>
+//create a request to counter endpoint
 
-            <br>
-            <div class = "footer"> 
-            This button <button id="counter"> Click Me</button> has been clicked <span id="count"> 0 </span>times.
-            </div>
-            <hr>
-            <br>
-            <input type="text" placeholder="Name"  id="n" ></input>
-            <input type="submit" value="Submit" id="submit_btn"></input>
-            <ul id="namelist">
+var request = new XMLHttpRequest();
+request.onreadystatechange = function () {
+if(request.readyState == XMLHttpRequest.DONE)
+{
+if(request.status==200)
+{
+var counter = request.responseText;
+var span = document.getElementById('count');
+span.innerHTML = counter.toString();
+}
+}
+//not yet done - no action reqd
+};
 
-            </ul>
-   </div>
-   <script type = "text/javascript" src="/ui/main.js"> </script>
-</body>
+//make a request
+request.open('GET','http://girijaiyer1996.imad.hasura-app.io/counter',true);
+request.send(null);
+
+};
+
+//submit name
+
+var submit = document.getElementById('submit_btn');
+submit.onclick = function () {
+
+ //create a request to counter endpoint
+var request = new XMLHttpRequest();
+request.onreadystatechange = function () 
+{
+if(request.readyState == XMLHttpRequest.DONE)
+{
+if(request.status==200)
+{
+//capture a list of names and render it as a list
+var names = request.responseText;
+names = JSON.parse(names);
+var list = '';
+for(var i=0;i< names.length; i++)
+{
+list += ' ' + names[i] + ' ';
+}
+var ul = document.getElementById('namelist');
+ul.innerHTML = list;
+}
+}
+//not yet done - no action reqd
+};
+//make a request
+var nameInput = document.getElementById('n');
+var n = nameInput.value;
+request.open('GET','http://erutsavsolanki27.imad.hasura-app.io/submit-name?name='+ n,true);
+request.send(null);
+};*/
+
+var button = document.getElementById('counter');
+var counter = 0;
+button.onclick = function(){
+    counter = counter + 1;
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
+    var reuqest = new XMLHttpRequest();
+        
+    request.onreadystatechange = function(){
+    if(request.readyState === XMLHttpRequest.DONE){
+        if(request.status ===200){
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }   
+    };    
+   request.open('GET', 'http://erutsavsolanki27.imad.hasura-app.io/counter', true);
+   request.send(null); 
+};
+
+
+var nameInput = document.getElementByID('name');
+var name = nameInput.value;
+var submit = document.getElementByID('submit_btn');
+submit.onClick = function(){
+    
+    
+ var names = ['name1', 'name2', 'name3', 'name4'];
+ var list = '';
+ for(var i=0; i < names.length; i++){
+     list += '<li>' + names[i] + '</li>';
+ }
+ var ul = document.getElementByID('namelist');
+ ul.innerHTML = list;
+ 
+ 
+};
