@@ -1,4 +1,4 @@
-/*var button = document.getElementById('counter');
+var button = document.getElementById('counter');
 var counter = 0;
 
 button.onclick = function() {
@@ -57,8 +57,8 @@ var nameInput = document.getElementById('n');
 var n = nameInput.value;
 request.open('GET','http://erutsavsolanki27.imad.hasura-app.io/submit-name?name='+ n,true);
 request.send(null);
-};*/
-
+};
+/*
 var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function(){
@@ -96,4 +96,4 @@ submit.onClick = function(){
  ul.innerHTML = list;
  
  
-};
+};*/
