@@ -1,4 +1,5 @@
-var express = require('express');
+
+/*var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 /*var pool = require('pg').pool;
@@ -11,7 +12,7 @@ var config = {
     port:'5432',
     password: process.env.DB_PASSWORD
     
-};*/
+};
 
 var articles = {
     
@@ -98,6 +99,7 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
+
 var counter = 0;
 //app.get('/counter', function (req, res) {
 counter = counter + 1;
@@ -160,3 +162,6 @@ app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 
 ;
+
+
+*/
